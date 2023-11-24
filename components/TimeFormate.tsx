@@ -1,7 +1,6 @@
 "use client";
 
 import useLoadSong from '@/hooks/useLoadSongUrl';
-import { usePlayerModel } from '@/hooks/usePlayerModel';
 import { Song } from '@/types';
 import { formatTime } from '@/utils/format';
 import React, { useEffect, useState } from 'react'
