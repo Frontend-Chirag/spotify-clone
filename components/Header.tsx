@@ -12,7 +12,6 @@ import Button from './Button';
 import { useUser } from '@/hooks/useUser';
 import { FaUserAlt } from 'react-icons/fa';
 import toast from 'react-hot-toast';
-import { usePalette } from 'react-palette';
 import Link from 'next/link';
 import usePlayer from '@/hooks/usePlayer';
 
@@ -25,7 +24,6 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ children, className, imageUrl }) => {
 
     const player = usePlayer();
-    const { data, error } = usePalette(imageUrl || '')
     const authModel = useAuthModel();
     const router = useRouter();
 
@@ -49,9 +47,8 @@ const Header: React.FC<HeaderProps> = ({ children, className, imageUrl }) => {
         <div className={twMerge(`
         h-fit  
         p-6
-        ${!imageUrl && 'bg-gradient-to-b from-emerald-800'}
+        'bg-gradient-to-b from-emerald-800'}
         `, className)}
-            style={{ background: imageUrl && `linear-gradient(to bottom, ${data.vibrant} , black)` }}
         >
             <div className='w-full mb-4 flex items-center  justify-between '>
                 <div className='hidden md:flex gap-x-2 items-center'>
