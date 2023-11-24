@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+hmtl,
+body,
+:root{
+  height: 100% ;
+  color-scheme: dark;
+  background-color: black;
+}
